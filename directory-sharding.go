@@ -1,12 +1,13 @@
 /**
  * TODO :
- * [ ] parse arguments : source,dest,nb_entries
+ * [x] parse arguments : source,dest,nb_entries
  * [x] list directory content
  * [ ] implement test function ???
  * [ ] fix upper / lower case MIX...
+ * [ ] cleaner trace/debug
  *
  * for testing purpose fake direcory could be fastly created (coreutils):
- *  ➜  /tmp for i in `gshuf -n 200 /usr/share/dict/words` ; do mkdir $i; done
+ *  ➜  /tmp for i in `gshuf -n 200 /usr/share/dict/words` ; do mkdir $i; done // shuf on linux
  *
  */
 
@@ -23,9 +24,9 @@ import (
 )
 
 // note, that variables are pointers
-var srcDirectory = flag.String("from", "", "Directory to process")
-var destDirectory = flag.String("to", "", "Destination directory")
-var maxNbEntries = flag.Int("max", 10, "Max number of TOP directory")
+var srcDirectory = flag.String("from", "", "Directory to process - mandatory")
+var destDirectory = flag.String("to", "", "Destination directory - mandatory")
+var maxNbEntries = flag.Int("max", 10, "Max number of TOP directory - optionnal")
 
 var (
 	Trace   *log.Logger
