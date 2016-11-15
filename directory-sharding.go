@@ -97,7 +97,7 @@ func main() {
 
 	// compute chunk now
 	chunks := [][]os.FileInfo{}
-	for i := 0; i <= max_nb_entries; i++ {
+	for i := 0; i < max_nb_entries; i++ {
 
 		j := i * chunk_size
 		Info.Println("chunk #", i, "splice offset", j)
@@ -136,7 +136,7 @@ func main() {
 		*/
 
 		dir_name := computeChunkDirectoryName(previous_directory, first_directory, last_directory, next_directory)
-		Info.Println("dir-computer ", dir_name)
+		Info.Println("dir-computer ", i_chunk, dir_name)
 		top_dirs = append(top_dirs, dir_name)
 		previous_directory = last_directory
 	}
