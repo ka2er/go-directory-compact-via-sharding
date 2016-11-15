@@ -28,3 +28,44 @@ Usage of /Users/seb/work/bin/go-directory-compact-via-sharding:
   -to string
     	Destination directory
 ```
+
+## Exemple
+
+Before 
+```
+├── antipapalist
+│   └── pentadecahydrated
+├── ignobly
+│   └── purplely
+├── induction
+│   └── tetralemma
+├── jemadar
+│   └── panharmonicon
+├── minatorially
+│   └── embryotrophy
+├── noseless
+│   └── stereotelemeter
+├── platyhelminthes
+│   └── imbased
+├── puerile
+│   └── adital
+├── semicontinuum
+│   └── frontiersman
+└── sonnetwise
+    └── mouflon
+```
+After
+```
+├── A => I
+│   ├── antipapalist
+│   ├── ignobly
+│   └── induction
+├── J => N
+│   ├── jemadar
+│   ├── minatorially
+│   └── noseless
+└── P => S
+    ├── platyhelminthes
+    ├── puerile
+    └── semicontinuum
+```    
