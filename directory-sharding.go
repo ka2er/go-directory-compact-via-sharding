@@ -166,8 +166,8 @@ func main() {
 
 			link_src := filepath.Join(src_directory, dir.Name())
 
-			// hardlink : no wasted spaces !!
-			err = os.Link(link_src, filepath.Join(dest_path, dir.Name()))
+			// softlink : no wasted spaces !! (directory hardlink only on OSX)
+			err = os.Symlink(link_src, filepath.Join(dest_path, dir.Name()))
 			if err != nil {
 				log.Fatalln(err)
 			}
