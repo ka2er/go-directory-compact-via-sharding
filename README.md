@@ -20,7 +20,7 @@ You just need to pass from and destination directory.
  - Max parameter is optionnal
 
 ```
-Usage of /home/seb/work/bin/go-directory-compact-via-sharding:
+Usage of go-directory-compact-via-sharding:
   -from="": Directory to process - mandatory
   -max=10: Max number of TOP directory - optionnal
   -to="": Destination directory - mandatory
