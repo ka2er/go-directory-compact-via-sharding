@@ -20,13 +20,10 @@ You just need to pass from and destination directory.
  - Max parameter is optionnal
 
 ```
-Usage of /Users/seb/work/bin/go-directory-compact-via-sharding:
-  -from string
-    	Directory to process
-  -max int
-    	Max number of TOP directory (default 10)
-  -to string
-    	Destination directory
+Usage of /home/seb/work/bin/go-directory-compact-via-sharding:
+  -from="": Directory to process - mandatory
+  -max=10: Max number of TOP directory - optionnal
+  -to="": Destination directory - mandatory
 ```
 
 ## Exemple
@@ -49,10 +46,9 @@ Before
 │   └── imbased
 ├── puerile
 │   └── adital
-├── semicontinuum
-│   └── frontiersman
-└── sonnetwise
-    └── mouflon
+└── semicontinuum
+    └── frontiersman
+
 ```
 After
 ```
