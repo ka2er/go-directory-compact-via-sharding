@@ -184,7 +184,7 @@ func computeChunkDirectoryName(dir_prev, dir_1st, dir_last, dir_next string) str
 
 	_, dir_last_prefix, _ := getStringsDiffer(dir_last, dir_next)
 
-	return strings.ToUpper(dir_1st_prefix + " => " + dir_last_prefix)
+	return strings.ToUpper(dir_1st_prefix + " »»» " + dir_last_prefix)
 }
 
 // return common base with 1st different char + index of this char
