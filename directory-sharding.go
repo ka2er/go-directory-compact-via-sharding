@@ -5,6 +5,7 @@
  * [ ] implement test function ???
  * [ ] fix upper / lower case MIX...
  * [ ] cleaner trace/debug
+ * [x] FIXED : where is last chunk ????
  *
  * for testing purpose fake direcory could be fastly created (coreutils):
  *  ➜  /tmp for i in `gshuf -n 200 /usr/share/dict/words` ; do mkdir $i; done // shuf on linux
@@ -18,6 +19,7 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
+	"math"
 	"os"
 	"path/filepath"
 	"strings"
@@ -90,7 +92,7 @@ func main() {
 	}
 
 	// compute chunk sizes
-	chunk_size := nb_entries / max_nb_entries
+	chunk_size := int(math.Ceil(float64(nb_entries) / float64(max_nb_entries)))
 
 	// ensure chunking is necessary
 	// report chunk size to me :D
